@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Grazi Rodrigues | Lash & Brows</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bege: '#F5EDE4',
+                        dourado: '#C8A27C',
+                        rose: '#F9ECEC',
+                        textoEscuro: '#4A3B32',
+                        textoClaro: '#8A7B72'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Efeito suave de rolagem */
+        html { scroll-behavior: smooth; }
+        
+        /* Efeito hover nos cards */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(200, 162, 124, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-bege text-textoEscuro font-sans antialiased">
+
+    <nav class="fixed w-full bg-[#FDFBF8]/80 backdrop-blur-md z-50 border-b border-white/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <a href="#home" class="text-2xl text-textoEscuro font-serif tracking-wide shrink-0">
+                    Studio <span class="italic text-[#dca49a]">Grazi Rodrigues</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-6 lg:space-x-10 items-center text-[15px] font-sans text-textoClaro font-light">
+                    <a href="#home" class="hover:text-[#dca49a] transition-colors">Início</a>
+                    <a href="#sobre" class="hover:text-[#dca49a] transition-colors">Sobre</a>
+                    <a href="#servicos" class="hover:text-[#dca49a] transition-colors">Procedimentos</a>
+                    <a href="#galeria" class="hover:text-[#dca49a] transition-colors">Galeria</a>
+                    <a href="#contato" class="hover:text-[#dca49a] transition-colors">Localização</a>
+                    <a href="#contato" class="hover:text-[#dca49a] transition-colors">Contato</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-4 shrink-0">
+                    <a href="http://localhost:8501" target="_blank" class="border border-textoClaro/30 text-textoEscuro px-6 py-2 rounded-full font-sans text-sm hover:bg-white/50 transition-all duration-300">
+                        Área da Lash
+                    </a>
+                    <a href="#contato" class="bg-[#dca49a] text-white px-8 py-2 rounded-full font-sans text-sm font-medium shadow-sm shadow-[#dca49a]/20 hover:bg-[#c89289] hover:-translate-y-0.5 transition-all duration-300">
+                        Agendar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center pt-24 pb-12 bg-gradient-to-br from-[#FDFBF8] to-[#F5EDE4]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12 w-full">
+            
+            <div class="w-full md:w-1/2 text-left">
+                
+                <div class="inline-block px-4 py-1 rounded-full border border-dourado/30 text-textoClaro text-xs font-bold tracking-widest mb-6 uppercase bg-white/50 backdrop-blur-sm">
+                    <i class="fa-solid fa-spa text-[#dca49a] mr-2"></i> Lash & Brow Design
+                </div>
+                
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-textoEscuro mb-6 leading-tight">
+                    Realçando sua <br> 
+                    <span style="font-family: 'Pinyon Script', cursive; font-weight: normal; font-size: 1.2em; letter-spacing: 2px;" class="text-[#dca49a]">beleza natural</span>
+                </h1>
+                
+                <p class="text-lg text-textoClaro mb-10 max-w-md">
+                    No Studio Grazi Rodrigues cada olhar é uma obra de arte. Extensão de cílios e design de sobrancelhas com técnica refinada e um toque autoral.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 mb-14">
+                    <a href="#contato" class="bg-[#dca49a] text-white px-8 py-3 rounded-full font-sans font-bold shadow-lg shadow-[#dca49a]/20 hover:bg-[#c89289] transition-all duration-300">
+                        Agendar pelo WhatsApp
+                    </a>
+                    <a href="#galeria" class="border border-textoClaro/30 text-textoEscuro px-8 py-3 rounded-full font-sans font-bold hover:bg-white/50 transition-all duration-300">
+                        Ver Portfólio
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-8">
+                    <div>
+                        <p class="font-serif text-4xl text-textoEscuro mb-1">+5</p>
+                        <p class="text-xs text-textoClaro uppercase tracking-widest font-bold">Anos de experiência</p>
+                    </div>
+                    <div class="w-px h-12 bg-dourado/30"></div>
+                    <div>
+                        <p class="font-serif text-4xl text-textoEscuro mb-1">+1k</p>
+                        <p class="text-xs text-textoClaro uppercase tracking-widest font-bold">Clientes felizes</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="w-full md:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1587778082149-bd5b1bf5d3fa?q=80&w=1000&auto=format&fit=crop" alt="Extensão de Cílios" class="rounded-[40px] shadow-2xl object-cover h-[500px] md:h-[650px] w-full border-8 border-white/50">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-[#FAF8F5] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
+            
+            <div class="w-full lg:w-5/12 relative">
+                <div class="rounded-[40px] overflow-hidden shadow-xl mr-4 md:mr-10">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop" alt="Grazi Rodrigues" class="w-full h-[500px] md:h-[600px] object-cover">
+                </div>
+                
+                <div class="absolute -bottom-6 right-0 bg-[#dca49a] p-8 rounded-2xl shadow-xl w-[280px] max-w-[90%]">
+                    <p class="font-serif text-textoEscuro text-lg italic mb-4 leading-relaxed">
+                        "Cada cliente é uma musa única."
+                    </p>
+                    <p class="text-textoEscuro text-xs font-bold uppercase tracking-widest">
+                        — GRAZI
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-7/12 mt-10 lg:mt-0">
+                
+                <h2 class="font-serif text-4xl md:text-5xl text-textoEscuro mb-8 leading-tight">
+                    A arte de revelar a <span class="italic text-textoEscuro">beleza única</span> de cada olhar
+                </h2>
+                
+                <p class="text-textoClaro font-light leading-relaxed mb-6 text-lg">
+                    Sou Grazi Rodrigues, especialista em Lash e Brow design. Há mais de cinco anos transformo olhares com técnicas modernas, materiais de alta qualidade e um olhar atento à harmonia do rosto de cada cliente.
+                </p>
+                
+                <p class="text-textoClaro font-light leading-relaxed mb-12 text-lg">
+                    Meu propósito é simples: realçar o que você já tem de mais bonito, com elegância, cuidado e uma experiência acolhedora do começo ao fim.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    
+                    <div class="border border-bege rounded-2xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+                        <i class="fa-regular fa-heart text-[#dca49a] text-2xl mb-4"></i>
+                        <h3 class="font-serif text-xl text-textoEscuro mb-2">Cuidado</h3>
+                        <p class="text-sm text-textoClaro font-light leading-relaxed">Atendimento humanizado e personalizado para cada cliente.</p>
+                    </div>
+
+                    <div class="border border-bege rounded-2xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+                        <i class="fa-solid fa-wand-magic-sparkles text-[#dca49a] text-2xl mb-4"></i>
+                        <h3 class="font-serif text-xl text-textoEscuro mb-2">Excelência</h3>
+                        <p class="text-sm text-textoClaro font-light leading-relaxed">Técnica precisa e produtos premium em cada aplicação.</p>
+                    </div>
+
+                    <div class="border border-bege rounded-2xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+                        <i class="fa-solid fa-award text-[#dca49a] text-2xl mb-4"></i>
+                        <h3 class="font-serif text-xl text-textoEscuro mb-2">Confiança</h3>
+                        <p class="text-sm text-textoClaro font-light leading-relaxed">Profissional certificada e em constante aperfeiçoamento.</p>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-rose/30 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-textoEscuro mb-4">Meus Procedimentos</h2>
+                <p class="text-textoClaro font-light italic">Técnicas exclusivas para realçar a sua melhor versão</p>
+            </div>
+
+            <div class="relative group">
+                
+                <div id="service-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 transition-all duration-500 scroll-smooth">
+                    
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege card-hover flex-shrink-0">
+                        <div class="w-12 h-12 bg-bege rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-eye text-[#dca49a]"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-textoEscuro mb-3">Volume Russo</h3>
+                        <p class="text-textoClaro text-sm font-light leading-relaxed mb-8">Para quem ama aquele olhar marcante e preenchido.<br> Fios super finos montados em fans delicados.</p>
+                        <a href="#contato" class="text-[#dca49a] text-xs font-bold uppercase tracking-widest hover:underline italic">Saber mais —</a>
+                    </div>
+
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege card-hover flex-shrink-0">
+                        <div class="w-12 h-12 bg-bege rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-leaf text-[#dca49a]"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-textoEscuro mb-3">Fio a Fio Clássico</h3>
+                        <p class="text-textoClaro text-sm font-light leading-relaxed mb-8">O efeito rímel perfeito. Ideal para um visual<br> natural e elegante para o dia a dia.</p>
+                        <a href="#contato" class="text-[#dca49a] text-xs font-bold uppercase tracking-widest hover:underline italic">Saber mais —</a>
+                    </div>
+
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege card-hover flex-shrink-0">
+                        <div class="w-12 h-12 bg-bege rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-pen text-[#dca49a]"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-textoEscuro mb-3">Design de Sobrancelha</h3>
+                        <p class="text-textoClaro text-sm font-light leading-relaxed mb-8">Mapeamento facial completo com opção de<br> aplicação de Henna para preencher falhas.</p>
+                        <a href="#contato" class="text-[#dca49a] text-xs font-bold uppercase tracking-widest hover:underline italic">Saber mais —</a>
+                    </div>
+
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege card-hover flex-shrink-0">
+                        <div class="w-12 h-12 bg-bege rounded-full flex items-center justify-center mb-6"><i class="fa-solid fa-star text-[#dca49a]"></i></div>
+                        <h3 class="font-serif text-2xl text-textoEscuro mb-3">Volume Híbrido</h3>
+                        <p class="text-textoClaro text-sm font-light leading-relaxed mb-8">A mistura perfeita entre o clássico e<br> o volume para um olhar sofisticado.</p>
+                        <a href="#contato" class="text-[#dca49a] text-xs font-bold uppercase tracking-widest italic">Saber mais —</a>
+                    </div>
+
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege flex-shrink-0">
+                         <h3 class="font-serif text-2xl text-textoEscuro mb-3">Procedimento 5</h3>
+                         <p class="text-textoClaro text-sm mb-8 italic">Texto para alterar manualmente...</p>
+                    </div>
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege flex-shrink-0">
+                         <h3 class="font-serif text-2xl text-textoEscuro mb-3">Procedimento 6</h3>
+                         <p class="text-textoClaro text-sm mb-8 italic">Texto para alterar manualmente...</p>
+                    </div>
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege flex-shrink-0">
+                         <h3 class="font-serif text-2xl text-textoEscuro mb-3">Procedimento 7</h3>
+                         <p class="text-textoClaro text-sm mb-8 italic">Texto para alterar manualmente...</p>
+                    </div>
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege flex-shrink-0">
+                         <h3 class="font-serif text-2xl text-textoEscuro mb-3">Procedimento 8</h3>
+                         <p class="text-textoClaro text-sm mb-8 italic">Texto para alterar manualmente...</p>
+                    </div>
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege flex-shrink-0">
+                         <h3 class="font-serif text-2xl text-textoEscuro mb-3">Procedimento 9</h3>
+                         <p class="text-textoClaro text-sm mb-8 italic">Texto para alterar manualmente...</p>
+                    </div>
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege flex-shrink-0">
+                         <h3 class="font-serif text-2xl text-textoEscuro mb-3">Procedimento 10</h3>
+                         <p class="text-textoClaro text-sm mb-8 italic">Texto para alterar manualmente...</p>
+                    </div>
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege flex-shrink-0">
+                         <h3 class="font-serif text-2xl text-textoEscuro mb-3">Procedimento 11</h3>
+                         <p class="text-textoClaro text-sm mb-8 italic">Texto para alterar manualmente...</p>
+                    </div>
+                    <div class="min-w-full md:min-w-[calc(33.333%-16px)] snap-start bg-white p-8 rounded-[32px] shadow-sm border border-bege flex-shrink-0">
+                         <h3 class="font-serif text-2xl text-textoEscuro mb-3">Procedimento 12</h3>
+                         <p class="text-textoClaro text-sm mb-8 italic">Texto para alterar manualmente...</p>
+                    </div>
+
+                </div>
+
+               <button id="nextBtn" onclick="document.getElementById('service-slider').scrollBy({left: 400, behavior: 'smooth'})" 
+                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-[#C8A27C] text-white w-14 h-14 rounded-full shadow-xl hover:bg-[#b08b65] transition-all duration-300 z-10 hidden md:flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-right text-xl"></i>
+                </button>
+
+                <button id="prevBtn" onclick="document.getElementById('service-slider').scrollBy({left: -400, behavior: 'smooth'})" 
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-[#C8A27C] text-white w-14 h-14 rounded-full shadow-xl hover:bg-[#b08b65] transition-all duration-300 z-10 hidden md:flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-left text-xl"></i>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+
+    <section id="galeria" class="py-20 bg-[#FAF8F5]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-4xl text-center text-dourado mb-12">Portfólio</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1587778082149-bd5b1bf5d3fa?w=400&h=400&fit=crop" class="rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1512496015851-a1fbbfc6d4dd?w=400&h=400&fit=crop" class="rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?w=400&h=400&fit=crop" class="rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&h=400&fit=crop" class="rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+            </div>
+        </div>
+    </section>
+
+   <section id="contato" class="py-24 bg-[#FAF8F5]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            
+            <div class="w-full lg:w-5/12">
+                
+                <p class="text-[#dca49a] text-xs font-bold uppercase tracking-[0.2em] mb-4">
+                    Onde Estamos
+                </p>
+                
+                <h2 class="font-serif text-4xl md:text-5xl text-textoEscuro mb-6">
+                    Visite nosso <span class="italic text-textoEscuro font-light">studio</span>
+                </h2>
+                
+                <p class="text-textoClaro font-light leading-relaxed mb-10 text-lg">
+                    Um espaço pensado para o seu conforto, com ambiente acolhedor, climatizado e dedicado exclusivamente ao cuidado com o seu olhar.
+                </p>
+                
+                <div class="space-y-4 mb-10">
+                    <p class="flex items-center text-textoEscuro font-light">
+                        <i class="fa-solid fa-location-dot text-[#dca49a] w-6 text-xl"></i> 
+                        Rua Urucum, 805
+                    </p>
+                    <p class="flex items-center text-textoEscuro font-light">
+                        <i class="fa-brands fa-whatsapp text-[#dca49a] w-6 text-xl"></i> 
+                        (21) 99400-2552
+                    </p>
+                    <p class="flex items-center text-textoEscuro font-light">
+                        <i class="fa-brands fa-instagram text-[#dca49a] w-6 text-xl"></i> 
+                        @studiograzirodrigues
+                    </p>
+                </div>
+
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Urucum,+805" target="_blank" class="inline-flex items-center justify-center bg-[#dca49a] text-white px-8 py-3.5 rounded-full font-sans text-sm font-medium hover:bg-[#c89289] hover:-translate-y-1 transition-all duration-300 shadow-md shadow-[#dca49a]/20">
+                    <i class="fa-solid fa-location-arrow mr-3"></i> Como chegar
+                </a>
+                
+            </div>
+
+            <div class="w-full lg:w-7/12 h-[450px] rounded-[32px] overflow-hidden shadow-xl border-4 border-white relative">
+                <iframe src="https://maps.google.com/maps?q=Rua%20Urucum,%20805&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="absolute inset-0"></iframe>
+            </div>
+            
+        </div>
+    </section>
+
+    <a href="https://wa.me/5521970609449" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Mapeamento dos elementos
+            const slider = document.getElementById('service-slider');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            function atualizarVisibilidadeBotoes() {
+                if (!slider || !prevBtn || !nextBtn) return;
+
+                // Tolerância para evitar bugs de sub-pixel do navegador
+                const limite = 2; 
+
+                // --------------------------------------------------------
+                // REGRA 1: BOTÃO DA ESQUERDA
+                // Exibir apenas se scrollLeft for maior que 0 (rolou para a direita)
+                // --------------------------------------------------------
+                if (slider.scrollLeft <= limite) {
+                    // Está totalmente no início -> Ocultar botão esquerdo
+                    prevBtn.classList.add('opacity-0', 'invisible');
+                } else {
+                    // Tem conteúdo à esquerda -> Mostrar botão esquerdo
+                    prevBtn.classList.remove('opacity-0', 'invisible');
+                }
+
+                // --------------------------------------------------------
+                // REGRA 2: BOTÃO DA DIREITA
+                // Exibir apenas se ainda houver conteúdo oculto à direita
+                // Matemática: scrollAtual + larguraVisivel >= larguraTotal
+                // --------------------------------------------------------
+                const rolagemAtual = Math.ceil(slider.scrollLeft + slider.clientWidth);
+                const rolagemTotal = slider.scrollWidth;
+
+                if (rolagemAtual >= rolagemTotal - limite) {
+                    // Chegou no final -> Ocultar botão direito
+                    nextBtn.classList.add('opacity-0', 'invisible');
+                } else {
+                    // Tem conteúdo à direita -> Mostrar botão direito
+                    nextBtn.classList.remove('opacity-0', 'invisible');
+                }
+            }
+
+            // --------------------------------------------------------
+            // GATILHOS (Quando a função deve rodar)
+            // --------------------------------------------------------
+            
+            // A. Atualizar dinamicamente conforme o usuário rola
+            slider.addEventListener('scroll', atualizarVisibilidadeBotoes);
+            
+            // B. Atualizar se a tela mudar de tamanho (giro de celular/redimensionamento)
+            window.addEventListener('resize', atualizarVisibilidadeBotoes);
+            
+            // C. Lógica no carregamento inicial
+            atualizarVisibilidadeBotoes();
+            
+            // D. Confirmação após renderização de fontes e imagens (garante o scrollWidth correto)
+            window.addEventListener('load', () => {
+                setTimeout(atualizarVisibilidadeBotoes, 200);
+            });
+        });
+    </script>
+</body>
+</html>
