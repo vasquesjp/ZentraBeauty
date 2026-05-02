@@ -45,13 +45,17 @@
 </head>
 <body class="bg-bege text-textoEscuro font-sans antialiased">
 
-    <nav class="fixed w-full bg-[#FDFBF8]/80 backdrop-blur-md z-50 border-b border-white/20 transition-all duration-300">
+   <nav class="fixed w-full bg-[#FDFBF8]/90 backdrop-blur-md z-50 border-b border-white/20 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 
                 <a href="#home" class="text-2xl text-textoEscuro font-serif tracking-wide shrink-0">
                     Studio <span class="italic text-[#dca49a]">Grazi Rodrigues</span>
                 </a>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-textoEscuro text-2xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 
                 <div class="hidden md:flex space-x-6 lg:space-x-10 items-center text-[15px] font-sans text-textoClaro font-light">
                     <a href="#home" class="hover:text-[#dca49a] transition-colors">Início</a>
@@ -71,6 +75,25 @@
                     </a>
                 </div>
 
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-[#FDFBF8] border-t border-bege/50 px-4 pt-2 pb-6 space-y-2 shadow-xl absolute w-full left-0">
+            <a href="#home" class="block text-textoEscuro hover:text-[#dca49a] transition-colors py-3 px-2 rounded-lg hover:bg-bege/30">Início</a>
+            <a href="#sobre" class="block text-textoEscuro hover:text-[#dca49a] transition-colors py-3 px-2 rounded-lg hover:bg-bege/30">Sobre</a>
+            <a href="#servicos" class="block text-textoEscuro hover:text-[#dca49a] transition-colors py-3 px-2 rounded-lg hover:bg-bege/30">Procedimentos</a>
+            <a href="#galeria" class="block text-textoEscuro hover:text-[#dca49a] transition-colors py-3 px-2 rounded-lg hover:bg-bege/30">Galeria</a>
+            <a href="#contato" class="block text-textoEscuro hover:text-[#dca49a] transition-colors py-3 px-2 rounded-lg hover:bg-bege/30">Localização e Contato</a>
+            
+            <hr class="border-bege my-4">
+            
+            <div class="flex flex-col gap-3 pt-2">
+                <a href="https://areadalash-grazi.streamlit.app" target="_blank" class="block text-center border border-textoClaro/30 text-textoEscuro px-6 py-3.5 rounded-full font-sans text-sm font-medium hover:bg-white/50 transition-all duration-300 w-full">
+                    Área da Lash
+                </a>
+                <a href="#contato" class="block text-center bg-[#dca49a] text-white px-8 py-3.5 rounded-full font-sans text-sm font-medium shadow-sm hover:bg-[#c89289] transition-all duration-300 w-full">
+                    Agendar Horário
+                </a>
             </div>
         </div>
     </nav>
@@ -399,6 +422,36 @@
             // D. Confirmação após renderização de fontes e imagens (garante o scrollWidth correto)
             window.addEventListener('load', () => {
                 setTimeout(atualizarVisibilidadeBotoes, 200);
+            });
+        });
+    </script>
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        // Abre/Fecha o menu ao clicar no botão
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Troca o ícone de barrinhas para um "X" quando abre
+            const icon = mobileBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Esconde o menu automaticamente quando a pessoa clica num link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             });
         });
     </script>
